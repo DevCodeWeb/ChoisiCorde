@@ -6,10 +6,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      mobile: "320px",
-      tablet: "640px",
-      laptop: "1024px",
-      desktop: "1440px",
+      sm: { min: "300px", max: "428px" },
+      md: { min: "429px", max: "799px" },
+      lg: { min: "800px", max: "1279px" },
+      xl: { min: "1280px", max: "1919px" },
     },
     colors: {
       black: "#292929",

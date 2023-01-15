@@ -12,8 +12,8 @@ export const Home = () => {
       <HeadView />
       <Presentation />
       <Interventions />
-      <Contact />
       <Nuisibles />
+      <Contact />
     </main>
   );
 };

@@ -35,9 +35,14 @@ export const Interventions = () => {
       </h1>
       {Interventions.map((intervention, i) => {
         return (
-          <div className="flex gap-[48px] items-center col-span-12" key={i}>
+          <div
+            className="flex gap-[48px] sm:flex-col md:flex-col items-center col-span-12"
+            key={i}
+          >
             <div className="">
-              <h4 className="text-[32px]">{intervention.title}</h4>
+              <h4 className="text-[32px] sm:text-[26px]">
+                {intervention.title}
+              </h4>
               <p>{intervention.description}</p>
             </div>
             <img
@@ -49,7 +54,7 @@ export const Interventions = () => {
         );
       })}
       <div className="col-span-12 text-center my-[128px]">
-        <h3 className="text-[32px] font-bold mb-[24px]">
+        <h3 className="text-[32px] font-bold mb-[24px] sm:text-[24px]">
           Confiez nous l’étude, la coordination et la réalisation de vos projets
         </h3>
         <Button label="Demandez votre devis" />

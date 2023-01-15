@@ -7,7 +7,7 @@ export const Input = ({ placeholder }: InputsType) => {
     <input
       placeholder={placeholder}
       type="text"
-      className="bg-white rounded-[8px] pl-[12px] w-[300px] h-[40px] text-black"
+      className="bg-white rounded-[8px] pl-[12px] w-full h-[40px] text-black"
     />
   );
 };

@@ -8,7 +8,7 @@ type CardType = {
 export const Card = ({ img, title, key }: CardType) => {
   return (
     <div
-      className="col-span-4 h-[280px] rounded-2xl overflow-hidden mb-[50px]"
+      className="col-span-4 sm:col-span-12 md:col-span-12 h-[280px] rounded-2xl overflow-hidden mb-[50px] sm:mb-[24px]"
       key={key}
     >
       <img src={img} alt={title} className="w-full aspect-auto" />
