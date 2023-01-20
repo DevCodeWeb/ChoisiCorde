@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "../atoms/Button";
 import { Couverture, MobileMenu, Nuisibles } from "../shared/Drop";
 
+import { scrollTo } from "helper/ScrollTo";
+
 export const Header = () => {
   const [visible, setVisible] = useState(false);
 
@@ -36,14 +38,24 @@ export const Header = () => {
           {navigationElements.map((navigationElement: any, i: any) => {
             return (
               <div key={i} className="relative sm:hidden md:hidden">
-                <ul className="duration-150 cursor-pointer hover:underline">
+                <ul
+                  className="duration-150 cursor-pointer hover:underline"
+                  onClick={() => {
+                    scrollTo(1700);
+                  }}
+                >
                   {navigationElement.title}
                 </ul>
                 {navigationElement.drop && <navigationElement.drop />}
               </div>
             );
           })}
-          <Button label="Demander un devis" />
+          <Button
+            label="Demander un devis"
+            onClick={() => {
+              scrollTo(7000);
+            }}
+          />
         </div>
       </header>
     </div>

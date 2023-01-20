@@ -1,4 +1,5 @@
-import { Button } from "components/atoms/Button";
+import { Button, Link } from "components/atoms/Button";
+import { scrollTo } from "helper/ScrollTo";
 import { useState } from "react";
 
 export const Couverture = () => {
@@ -45,41 +46,71 @@ type TypeMobileMenu = {
 
 export const MobileMenu = ({ setVisible }: TypeMobileMenu) => {
   return (
-    <div className="absolute left-0 z-50 w-screen h-screen bg-primary300 bg-opacity-40">
+    <div className="absolute left-0 z-50 w-screen h-screen overflow-scroll bg-primary300 bg-opacity-40">
       <div className="bg-white px-[18px] py-[18px]  h-screen flex flex-col justify-between w-[70vw]">
         <div className="text-primary300">
           <h2 className="text-[24px] font-bold mb-[24px]">Choisi Corde</h2>
           <h2 className="text-[20px] mb-[12px]">Présentation</h2>
-          <h3 className="text-[18px] mb-[8px] bg-primary100 rounded-md bg-opacity-5 px-[6px] py-[4px]">
-            Qui sommes-nous ?
-          </h3>
+          <Link
+            onClick={() => {
+              scrollTo(700);
+              setVisible(false);
+            }}
+            label="  Qui sommes-nous ?"
+          />
           <h2 className="text-[20px] mb-[12px]">Interventions</h2>
           <ul>
             {interventions.map((intervention, i) => {
               return (
-                <li
+                <Link
                   key={i}
-                  className="text-[18px] mb-[8px] bg-primary100 rounded-md bg-opacity-5 px-[6px] py-[4px]"
-                >
-                  {intervention.title}
-                </li>
+                  onClick={() => {
+                    scrollTo(700);
+                    setVisible(false);
+                  }}
+                  label={intervention.title}
+                />
               );
             })}
           </ul>
           <h2 className="text-[20px] mb-[12px]">Nuisibles</h2>
-          <h3 className="text-[18px] mb-[8px] bg-primary100 rounded-md bg-opacity-5 px-[6px] py-[4px]">
-            Désinfection
-          </h3>
-          <h3 className="text-[18px] mb-[8px] bg-primary100 rounded-md bg-opacity-5 px-[6px] py-[4px]">
-            Désinsectisation
-          </h3>
-          <h3 className="text-[18px] mb-[8px] bg-primary100 rounded-md bg-opacity-5 px-[6px] py-[4px]">
-            Dératisation
-          </h3>
+          <Link
+            onClick={() => {
+              scrollTo(4200);
+              setVisible(false);
+            }}
+            label="Désinfection"
+          />
+          <Link
+            onClick={() => {
+              scrollTo(4200);
+              setVisible(false);
+            }}
+            label="Désinsectisation"
+          />
+          <Link
+            onClick={() => {
+              scrollTo(4200);
+              setVisible(false);
+            }}
+            label="Dératisation"
+          />
         </div>
         <div className="flex flex-col gap-[8px]">
-          <Button label="Demander un devis" />
-          <Button label="Contacter" />
+          <Button
+            label="Demander un devis"
+            onClick={() => {
+              scrollTo(7000);
+              setVisible(false);
+            }}
+          />
+          <Button
+            label="Contacter"
+            onClick={() => {
+              scrollTo(7000);
+              setVisible(false);
+            }}
+          />
           <h2
             className="text-[16px] text-center hover:underline text-primary300"
             onClick={() => {

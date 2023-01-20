@@ -29,8 +29,8 @@ export const Interventions = () => {
     },
   ];
   return (
-    <section className="pt-[100px]">
-      <h1 className="col-span-12 text-[32px] font-semibold text-center mb-[32px]">
+    <section className="py-[100px]">
+      <h1 className="col-span-12 text-[32px] font-semibold text-center mb-[48px]">
         Nous intervenons
       </h1>
       {Interventions.map((intervention, i) => {
@@ -40,10 +40,10 @@ export const Interventions = () => {
             key={i}
           >
             <div className="">
-              <h4 className="text-[32px] sm:text-[26px]">
+              <h4 className="text-[32px] sm:text-[26px] text-orange font-bold">
                 {intervention.title}
               </h4>
-              <p>{intervention.description}</p>
+              <p className="text-[24px]">{intervention.description}</p>
             </div>
             <img
               src={intervention.imagePath}
@@ -53,12 +53,6 @@ export const Interventions = () => {
           </div>
         );
       })}
-      <div className="col-span-12 text-center my-[128px]">
-        <h3 className="text-[32px] font-bold mb-[24px] sm:text-[24px]">
-          Confiez nous l’étude, la coordination et la réalisation de vos projets
-        </h3>
-        <Button label="Demandez votre devis" />
-      </div>
     </section>
   );
 };
