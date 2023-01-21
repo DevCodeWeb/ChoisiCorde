@@ -40,13 +40,15 @@ export const Presentation = () => {
             attentes.
           </p>
         </div>
-        <div className="col-span-12 text-center mb-[64px] mt-[24px]">
-          <Button
-            label="Demandez votre devis"
-            onClick={() => {
-              scrollTo(7000);
-            }}
-          />
+        <div className="sm:col-span-12 md:col-span-12 col-span-4 col-start-5 text-center mb-[64px] mt-[24px]">
+          <div>
+            <Button
+              label="Demandez votre devis"
+              onClick={() => {
+                scrollTo(7000);
+              }}
+            />
+          </div>
         </div>
       </section>
     </div>
