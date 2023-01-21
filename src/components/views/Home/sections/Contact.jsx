@@ -82,12 +82,32 @@ export const Contact = () => {
                 ) : (
                   <div className="flex flex-col gap-[24px]">
                     <div className="flex sm:flex-col md:flex-col gap-[24px]">
-                      <Input placeholder="Prénom *" name="firstname" required />
-                      <Input placeholder="Nom *" name="lastname" required />
+                      <Input
+                        placeholder="Prénom *"
+                        name="firstname"
+                        required
+                        pattern="[a-zA-Z]{2-20}"
+                      />
+                      <Input
+                        placeholder="Nom *"
+                        name="lastname"
+                        required
+                        pattern="[a-zA-Z]{2-20}"
+                      />
                     </div>
                     <div className="flex  sm:flex-col md:flex-col  gap-[24px]">
-                      <Input placeholder="Email *" name="email" required />
-                      <Input placeholder="Téléphone *" name="phone" required />
+                      <Input
+                        placeholder="Email *"
+                        name="email"
+                        required
+                        pattern="[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,8}?"
+                      />
+                      <Input
+                        placeholder="Téléphone *"
+                        name="phone"
+                        required
+                        pattern="[0-9]{10}"
+                      />
                     </div>
                     <TextArea placeholder="Votre message *" name="message" />
                   </div>
