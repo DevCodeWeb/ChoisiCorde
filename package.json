@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@iconify/icons-eva": "^1.2.6",
+    "@iconify/icons-material-symbols": "^1.2.25",
     "@iconify/react": "^4.0.1",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",

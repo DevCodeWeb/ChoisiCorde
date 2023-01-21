@@ -40,7 +40,6 @@ export const Contact = () => {
           <div className="col-span-12 flex gap-[64px]">
             <img src="assets/call.jpg" alt="" className="sm:hidden md:hidden" />
             <div className="flex flex-col justify-center gap-[32px] sm:py-[32px] md:py-[32px] w-full">
-              <h3>Contactez-nous</h3>
               <h2 className="text-[40px] sm:text-[28px] font-bold">
                 Appelez <u>Choisi Corde</u>
                 <br />
@@ -51,8 +50,8 @@ export const Contact = () => {
                   </span>
                 </a>
               </h2>
-              <div className="flex gap-[24px] sm:flex-col md:flex-col">
-                <a href="tel:0751669701">
+              <div className="flex gap-[24px] sm:flex-col md:flex-col w-full">
+                <a href="tel:0751669701" className="w-full">
                   <Button label="Appeler maintenant" />
                 </a>
                 <Button
@@ -65,16 +64,23 @@ export const Contact = () => {
             </div>
           </div>
         ) : (
-          <div className="col-span-12 flex gap-[64px]">
+          <div className="col-span-12 flex gap-[24px]">
             <img
               src="assets/write.jpg"
               alt=""
               className="sm:hidden md:hidden"
             />
             <form ref={form} onSubmit={sendEmail}>
-              <div className="flex flex-col justify-center gap-[32px] sm:py-[32px] md:py-[32px] py-[32px] w-full">
-                <h3>Contactez-nous</h3>
-                <h2 className="text-[40px] font-bold">Demandez votre devis</h2>
+              <div className="flex flex-col justify-center gap-[24px] sm:py-[32px] md:py-[32px] py-[32px] w-full h-full">
+                <div className="flex flex-col justify-center h-full">
+                  <h2 className="text-[40px] font-bold">
+                    Demandez votre devis
+                  </h2>
+                  <p>
+                    Afin de répondre au mieux à votre demande, merci de remplir
+                    les champs ci-après :
+                  </p>
+                </div>
                 {send ? (
                   <p className="text-orange text-[20px] col-span-12">
                     Nous avons bien reçu votre message !
@@ -112,7 +118,7 @@ export const Contact = () => {
                     <TextArea placeholder="Votre message *" name="message" />
                   </div>
                 )}
-                <div className="flex gap-[24px] sm:flex-col md:flex-col">
+                <div className="flex gap-[24px] sm:flex-col md:flex-col w-full">
                   <Button
                     label="Appeler"
                     onClick={() => {

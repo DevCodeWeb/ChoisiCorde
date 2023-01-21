@@ -7,7 +7,7 @@ type ButtonType = {
 export const Button = ({ label, onClick }: ButtonType) => {
   return (
     <button
-      className="px-[18px] sm:w-full md:w-full py-[8px] hover:bg-white hover:text-primary300 font-semibold duration-150 bg-primary200 rounded-[4px]"
+      className="px-[18px] w-full sm:w-full md:w-full py-[8px] hover:bg-white hover:text-primary300 font-semibold duration-150 bg-primary200 rounded-[4px]"
       onClick={onClick}
     >
       <h1 className="sm:text-[24px] md:text-[24px]">{label}</h1>

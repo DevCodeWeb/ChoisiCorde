@@ -12,9 +12,6 @@ export const Header = () => {
 
   const navigationElements = [
     {
-      title: "Controle EPI",
-    },
-    {
       title: "Nuisibles",
     },
     {
