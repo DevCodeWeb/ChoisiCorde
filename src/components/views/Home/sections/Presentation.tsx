@@ -4,11 +4,11 @@ import { scrollTo } from "helper/ScrollTo";
 /* eslint-disable @next/next/no-img-element */
 export const Presentation = () => {
   return (
-    <div className="w-screen bg-primary100 mt-[120px] ">
+    <div className="w-screen bg-primary100 mt-[220px] ">
       <img
         src="assets/presentationFond.jpg"
         alt=""
-        className="w-screen aspect-auto brightness-50"
+        className="w-screen aspect-auto"
       />
       <section className="bg-primary100 sm:mt-[50px]">
         <div className="col-span-12 text-center sm:pt-0 sm:b-[24px] text-[24px] sm:text-[16px]">

@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Button } from "../atoms/Button";
 import { Couverture, MobileMenu, Nuisibles } from "../shared/Drop";
 
+import { Icon } from "@iconify/react";
+import menuFill from "@iconify/icons-eva/menu-fill";
+
 import { scrollTo } from "helper/ScrollTo";
 
 export const Header = () => {
@@ -25,12 +28,12 @@ export const Header = () => {
         <div className="flex items-center">
           <h2 className="sm:hidden md:hidden">Choisi Corde</h2>
           <h2
-            className=" lg:hidden xl:hidden"
+            className=" lg:hidden xl:hidden xxl:hidden"
             onClick={() => {
               setVisible(true);
             }}
           >
-            Menu
+            <Icon icon={menuFill} className="w-[32px] h-[32px]" />
           </h2>
         </div>
         {visible && <MobileMenu setVisible={setVisible} />}
