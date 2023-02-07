@@ -19,7 +19,7 @@ export default function HomePage() {
           name="keywords"
           content="Corde, Intervention, Paris, Cordiste, Toiture, Zinc, Ardoise, Accès difficile, Couverture, Couvreur"
         />
-        <meta name="author" content="Mansour NDAO" />
+        <meta name="author" content="Choisi Corde" />
       </Head>
       <Home />
     </>

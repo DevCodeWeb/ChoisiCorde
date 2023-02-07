@@ -1,85 +1,47 @@
+import { Icon } from "@iconify/react";
+import phoneFill from "@iconify/icons-eva/phone-fill";
+import emailFill from "@iconify/icons-eva/email-fill";
+import locationOnRounded from "@iconify/icons-material-symbols/location-on-rounded";
+
 import { Button } from "components/atoms/Button";
-import { scrollTo } from "helper/ScrollTo";
 
 export const Footer = () => {
   return (
     <div className="w-screen bg-black ">
       <footer className="py-[32px] flex flex-col gap-[64px]">
-        <div className="flex gap-[64px] sm:flex-col md:flex-col">
+        <div className="flex gap-[72px] sm:flex-col md:flex-col">
           <div className="flex flex-col gap-[12px]">
             <h3 className="font-blod text-[32px] mb-[12px]">Nos coordonnées</h3>
-            <h4 className="text-[16px] font-light">
-              Téléphone : &nbsp;
-              <a href="tel:0751669701">
-                <span className="duration-150 cursor-pointer hover:underline hover:text-primary100">
-                  07 51 66 97 01
-                </span>
-              </a>
-            </h4>
-            <h4 className="text-[16px] font-light ">
-              Mail : &nbsp;
-              <a href="mailto:choisicorde@gmail.com">
-                <span className="duration-150 cursor-pointer hover:underline hover:text-primary100">
-                  choisicorde@gmail.com
-                </span>
-              </a>
-            </h4>
-            <h4 className="text-[16px] font-light ">
-              Zone d’intervention : Paris - Île de France
-            </h4>
+            <a href="tel:0751669701">
+              <div className="duration-150 cursor-pointer text-[16px] font-light hover:underline hover:text-primary100 flex items-center gap-[12px]">
+                <Icon icon={phoneFill} />
+                <h4 className="text-[16px] font-light">
+                  <span className="duration-150 cursor-pointer text-[16px] font-light hover:underline hover:text-primary100">
+                    07 51 66 97 01
+                  </span>
+                </h4>
+              </div>
+            </a>
+            <a href="tel:0751669701">
+              <div className="duration-150 cursor-pointer text-[16px] font-light hover:underline hover:text-primary100 flex items-center gap-[12px]">
+                <Icon icon={emailFill} />
+                <h4 className="text-[16px] font-light">
+                  <span className="duration-150 cursor-pointer text-[16px] font-light hover:underline hover:text-primary100">
+                    choisicorde@gmail.com
+                  </span>
+                </h4>
+              </div>
+            </a>
+            <div className="flex gap-[12px] items-center text-[16px] font-light">
+              <Icon icon={locationOnRounded} />
+              <p>Paris - Île de France - Oise</p>
+            </div>
           </div>
-          <div className="flex flex-col gap-[12px]">
-            <h3 className="font-blod text-[32px] mb-[12px]">Nos services</h3>
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              Couvrture
-            </h4>
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              Recherche des fuites en toiture
-            </h4>
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              Installateur Conseil Velux
-            </h4>
-          </div>
-          <div className="flex flex-col gap-[12px] justify-end">
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              Controle EPI
-            </h4>
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              Intervention guêpes/frelons
-            </h4>
-            <h4
-              className="text-[16px] font-light hover:underline hover:text-primary100 duration-150 cursor-pointer"
-              onClick={() => {
-                scrollTo(1700);
-              }}
-            >
-              3D Dératisation
-            </h4>
+          <div className="flex flex-col items-center gap-[12px]">
+            <h3 className="font-blod text-[24px] mb-[12px]">Couverture</h3>
+            {["Ardoise", "Zinguerie", "Tuiles", "Isolation"].map((elm, i) => {
+              return <h4 className="text-[16px] font-light ">{elm}</h4>;
+            })}
           </div>
         </div>
         <div className="flex justify-between sm:flex-col-reverse md:flex-col-reverse sm:gap-[12px] md:gap-[12px]">

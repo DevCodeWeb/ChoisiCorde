@@ -9,7 +9,7 @@ module.exports = {
       sm: { min: "300px", max: "428px" },
       md: { min: "429px", max: "799px" },
       lg: { min: "800px", max: "1279px" },
-      xl: { min: "1280px", max: "1919px" },
+      xl: "1280px",
     },
     colors: {
       black: "#292929",
@@ -20,7 +20,11 @@ module.exports = {
       white: "#ececec",
       red: "#ff0000",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        headView: "url('/assets/headViewBg.svg')",
+      },
+    },
   },
   plugins: [],
 };

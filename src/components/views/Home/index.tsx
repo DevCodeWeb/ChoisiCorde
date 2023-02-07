@@ -1,14 +1,13 @@
-import { HeadView, Presentation, Interventions, Nuisibles } from "./sections";
+import { HeadView, Presentation, Interventions } from "./sections";
 
 import { Contact } from "./sections/Contact";
 
 export const Home = () => {
   return (
-    <main>
+    <main className="relative">
       <HeadView />
       <Presentation />
       <Interventions />
-      <Nuisibles />
       <Contact />
     </main>
   );
