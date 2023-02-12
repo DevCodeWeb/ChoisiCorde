@@ -1,12 +1,17 @@
-import { HeadView, Presentation, Interventions } from "./sections";
-
-import { Contact } from "./sections/Contact";
+import {
+  HeadView,
+  Presentation,
+  Offers,
+  Interventions,
+  Contact,
+} from "./sections";
 
 export const Home = () => {
   return (
     <main className="relative">
       <HeadView />
       <Presentation />
+      <Offers />
       <Interventions />
       <Contact />
     </main>

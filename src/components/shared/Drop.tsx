@@ -1,5 +1,6 @@
-import { Button, Link } from "components/atoms/Button";
+import { Button, LinkBtn } from "components/atoms/Button";
 import { scrollTo } from "helper/ScrollTo";
+import Link from "next/link";
 import { useState } from "react";
 
 export const Couverture = () => {
@@ -51,66 +52,73 @@ export const MobileMenu = ({ setVisible }: TypeMobileMenu) => {
         <div className="text-primary300">
           <h2 className="text-[24px] font-bold mb-[24px]">Choisi Corde</h2>
           <h2 className="text-[20px] mb-[12px]">Présentation</h2>
-          <Link
-            onClick={() => {
-              scrollTo(700);
-              setVisible(false);
-            }}
-            label="  Qui sommes-nous ?"
-          />
+          <Link href="/">
+            <LinkBtn
+              onClick={() => {
+                setVisible(false);
+              }}
+              label="  Qui sommes-nous ?"
+            />
+          </Link>
           <h2 className="text-[20px] mb-[12px]">Interventions</h2>
           <ul>
             {interventions.map((intervention, i) => {
               return (
-                <Link
-                  key={i}
-                  onClick={() => {
-                    scrollTo(700);
-                    setVisible(false);
-                  }}
-                  label={intervention.title}
-                />
+                <Link href="/realisations" key={i}>
+                  <LinkBtn
+                    onClick={() => {
+                      scrollTo(700);
+                      setVisible(false);
+                    }}
+                    label={intervention.title}
+                  />
+                </Link>
               );
             })}
           </ul>
           <h2 className="text-[20px] mb-[12px]">Nuisibles</h2>
-          <Link
-            onClick={() => {
-              scrollTo(4200);
-              setVisible(false);
-            }}
-            label="Désinfection"
-          />
-          <Link
-            onClick={() => {
-              scrollTo(4200);
-              setVisible(false);
-            }}
-            label="Désinsectisation"
-          />
-          <Link
-            onClick={() => {
-              scrollTo(4200);
-              setVisible(false);
-            }}
-            label="Dératisation"
-          />
+          <Link href="/">
+            <LinkBtn
+              onClick={() => {
+                setVisible(false);
+              }}
+              label="Désinfection"
+            />
+          </Link>
+          <Link href="/">
+            <LinkBtn
+              onClick={() => {
+                setVisible(false);
+              }}
+              label="Désinsectisation"
+            />
+          </Link>
+          <Link href="/">
+            <LinkBtn
+              onClick={() => {
+                setVisible(false);
+              }}
+              label="Dératisation"
+            />
+          </Link>
         </div>
         <div className="flex flex-col gap-[8px]">
-          <Button
-            label="Demander un devis"
-            onClick={() => {
-              scrollTo(7000);
-              setVisible(false);
-            }}
-          />
-          <Button
-            label="Contacter"
-            onClick={() => {
-              scrollTo(7000);
-              setVisible(false);
-            }}
-          />
+          <Link href="/contact">
+            <Button
+              label="Demander un devis"
+              onClick={() => {
+                setVisible(false);
+              }}
+            />
+          </Link>
+          <Link href="/contact">
+            <Button
+              label="Contacter"
+              onClick={() => {
+                setVisible(false);
+              }}
+            />
+          </Link>
           <h2
             className="text-[16px] text-center hover:underline text-primary300"
             onClick={() => {

@@ -21,23 +21,24 @@ export const Header = () => {
   const navigationElements = [
     {
       title: "Accueil",
+      link: "/",
     },
     {
       title: "Réalisations",
-    },
-    {
-      title: "Couverture",
+      link: "/realisations",
     },
   ];
 
   return (
     <div
       className={`fixed top-0 z-50 w-screen  duration-300 ${
-        scroll ? "bg-primary300 shadow-lg" : "bg-transparent"
+        scroll
+          ? "bg-primary300 shadow-lg"
+          : "bg-transparent hover:bg-primary300 hover:shadow-lg"
       }`}
     >
-      <header className="h-[75px] flex justify-between max-w-[1280px] relative">
-        <div className="flex items-center">
+      <header className="h-[75px] flex justify-between max-w-[1280px] relative px-[12px]">
+        <div className="flex items-center justify-between w-full">
           <Link href="/">
             <div className="w-[50px] cursor-pointer flex items-center gap-[12px]">
               <img
@@ -58,24 +59,21 @@ export const Header = () => {
           </h2>
         </div>
         {visible && <MobileMenu setVisible={setVisible} />}
-        <div className="flex items-center gap-[24px]">
+        <div className="flex items-center gap-[24px] xs:hidden sm:hidden">
           {navigationElements.map((navigationElement: any, i: any) => {
             return (
               <div key={i} className="relative sm:hidden md:hidden">
-                <ul
-                  className="duration-150 cursor-pointer hover:text-primary100"
-                  onClick={() => {
-                    scrollTo(1700);
-                  }}
-                >
-                  {navigationElement.title}
-                </ul>
+                <Link href={navigationElement.link}>
+                  <ul className="duration-150 cursor-pointer hover:text-primary100">
+                    {navigationElement.title}
+                  </ul>
+                </Link>
                 {navigationElement.drop && <navigationElement.drop />}
               </div>
             );
           })}
           <Link href="contact">
-            <Button label="Demander un devis" />
+            <Button label="Contacter" />
           </Link>
         </div>
       </header>

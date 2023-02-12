@@ -4,18 +4,18 @@ import { scrollTo } from "helper/ScrollTo";
 /* eslint-disable @next/next/no-img-element */
 export const Presentation = () => {
   return (
-    <div className="w-screen bg-primary100 ">
+    <div className="w-screen shadow-lg bg-white xs:px-[12px] sm:px-[12px]">
       <section className="bg-primary100 sm:mt-[50px]">
-        <div className="bg-white col-span-12 text-primary300 rounded-2xl mt-[24px] text-center pt-[32px] pb-[12px]">
-          <h2 className="text-[38px] sm:text-[28px] font-semibold">
-            Expert de vos travaux en hauteur et d’accès difficiles
+        <div className="bg-white col-span-12 text-primary300 rounded-2xl mt-[24px] text-center pt-[32px] xs:px-[12px] sm:p-[12px]">
+          <h2 className="text-[38px] font-semibold xs:text-[24px] sm:text-[24px]">
+            Expert de vos travaux en hauteur et d’accès difficile
           </h2>
-          <h3 className="text-[24px] font-bold mb-[48px] sm:text-[24px]">
+          <h3 className="text-[24px] font-bold mb-[48px] sm:text-[18px] xs:text-[18px]">
             Confiez nous l’étude, la coordination et la réalisation de vos
             projets
           </h3>
         </div>
-        <div className="col-span-10 col-start-2 text-center sm:pt-0 sm:b-[24px] text-[24px] sm:text-[16px]">
+        <div className="col-span-10 col-start-2 text-center sm:pt-0 sm:b-[24px] text-[24px] xs:text-[16px] sm:text-[16px]">
           <br />
           <p>
             Notre société <b>ChoisiCorde</b>, située en Île-de-France,

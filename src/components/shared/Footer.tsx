@@ -8,8 +8,8 @@ import { Button } from "components/atoms/Button";
 export const Footer = () => {
   return (
     <div className="w-screen bg-black ">
-      <footer className="py-[32px] flex flex-col gap-[64px]">
-        <div className="flex gap-[72px] sm:flex-col md:flex-col">
+      <footer className="py-[32px] flex flex-col gap-[64px] xs:px-[12px] sm:px-[12px]">
+        <div className="flex gap-[72px] justify-between xs:flex-col-reverse sm:flex-col-reverse md:flex-col">
           <div className="flex flex-col gap-[12px]">
             <h3 className="font-blod text-[32px] mb-[12px]">Nos coordonnées</h3>
             <a href="tel:0751669701">
@@ -37,14 +37,38 @@ export const Footer = () => {
               <p>Paris - Île de France - Oise</p>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-[12px]">
-            <h3 className="font-blod text-[24px] mb-[12px]">Couverture</h3>
-            {["Ardoise", "Zinguerie", "Tuiles", "Isolation"].map((elm, i) => {
-              return <h4 className="text-[16px] font-light ">{elm}</h4>;
-            })}
+          <div className="flex gap-[48px] xs:flex-col sm:flex-col xs:items-start sm:items-start">
+            <div className="flex flex-col items-center gap-[12px]  xs:items-start sm:items-start">
+              <h3 className="font-blod text-[24px] mb-[12px]">En Corde</h3>
+              {["Anti-Pigeon", "Nettoyage", "Entretien", "Tags"].map(
+                (elm, i) => {
+                  return <h4 className="text-[16px] font-light ">{elm}</h4>;
+                }
+              )}
+            </div>
+            <div className="flex flex-col items-center gap-[12px]  xs:items-start sm:items-start">
+              <h3 className="font-blod text-[24px] mb-[12px]">Couverture</h3>
+              {["Ardoise", "Zinguerie", "Tuiles", "Isolation"].map((elm, i) => {
+                return <h4 className="text-[16px] font-light ">{elm}</h4>;
+              })}
+            </div>
+            <div className="flex flex-col items-center gap-[12px]  xs:items-start sm:items-start">
+              <h3 className="font-blod text-[24px] mb-[12px]">Velux</h3>
+              {["Installation", "Conseil", "Entretien"].map((elm, i) => {
+                return <h4 className="text-[16px] font-light ">{elm}</h4>;
+              })}
+            </div>
+            <div className="flex flex-col items-center gap-[12px]  xs:items-start  sm:items-start">
+              <h3 className="font-blod text-[24px] mb-[12px]">Nuisibles</h3>
+              {["Dératisation", "Désinfection", "Désinsectisation"].map(
+                (elm, i) => {
+                  return <h4 className="text-[16px] font-light ">{elm}</h4>;
+                }
+              )}
+            </div>
           </div>
         </div>
-        <div className="flex justify-between sm:flex-col-reverse md:flex-col-reverse sm:gap-[12px] md:gap-[12px]">
+        <div className="flex justify-between xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse xs:items-center sm:items-center xs:gap-[12px] sm:gap-[12px] md:gap-[12px]">
           <div className="flex items-center">
             <h5 className="text-[12px]">
               © Copyright 2022 - site développé par{" "}

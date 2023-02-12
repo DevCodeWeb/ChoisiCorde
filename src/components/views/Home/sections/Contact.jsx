@@ -35,11 +35,15 @@ export const Contact = () => {
   };
 
   return (
-    <section className="bg-primary100">
+    <section className="bg-primary100 xs:px-[12px] sm:px-[12px]">
       {contactWay === "call" ? (
         <div className="col-span-12 flex gap-[64px]">
-          <img src="assets/call.jpg" alt="" className="sm:hidden md:hidden" />
-          <div className="flex flex-col justify-center gap-[32px] sm:py-[32px] md:py-[32px] w-full">
+          <img
+            src="assets/call.jpg"
+            alt=""
+            className=" xs:hidden sm:hidden md:hidden"
+          />
+          <div className="flex flex-col justify-center gap-[32px] xs:text-center sm:text-center xs:py-[32px] sm:py-[32px] md:py-[32px] w-full">
             <h2 className="text-[40px] sm:text-[28px] font-bold">
               Appelez <u>Choisi Corde</u>
               <br />
@@ -50,7 +54,7 @@ export const Contact = () => {
                 </span>
               </a>
             </h2>
-            <div className="flex gap-[24px] sm:flex-col md:flex-col w-full">
+            <div className="flex gap-[24px] xs:flex-col sm:flex-col md:flex-col w-full">
               <a href="tel:0751669701" className="w-full">
                 <Button label="Appeler maintenant" />
               </a>
@@ -65,11 +69,15 @@ export const Contact = () => {
         </div>
       ) : (
         <div className="col-span-12 flex gap-[24px]">
-          <img src="assets/write.jpg" alt="" className="sm:hidden md:hidden" />
+          <img
+            src="assets/write.jpg"
+            alt=""
+            className="xs:hidden sm:hidden md:hidden"
+          />
           <form ref={form} onSubmit={sendEmail}>
-            <div className="flex flex-col justify-center gap-[24px] sm:py-[32px] md:py-[32px] py-[32px] w-full h-full">
+            <div className="flex flex-col justify-center gap-[24px] xs:py-[32px] sm:py-[32px] md:py-[32px] py-[32px] w-full h-full">
               <div className="flex flex-col justify-center h-full">
-                <h2 className="text-[40px] font-bold">Demandez votre devis</h2>
+                <h2 className="text-[40px] font-bold">Écrivez-nous</h2>
                 <p>
                   Afin de répondre au mieux à votre demande, merci de remplir
                   les champs ci-après :
@@ -81,7 +89,7 @@ export const Contact = () => {
                 </p>
               ) : (
                 <div className="flex flex-col gap-[24px]">
-                  <div className="flex sm:flex-col md:flex-col gap-[24px]">
+                  <div className="flex xs:flex-col sm:flex-col md:flex-col gap-[24px]">
                     <Input
                       placeholder="Jean"
                       label="Prénom"
@@ -97,7 +105,7 @@ export const Contact = () => {
                       pattern="[a-zA-Z]{2-20}"
                     />
                   </div>
-                  <div className="flex  sm:flex-col md:flex-col  gap-[24px]">
+                  <div className="flex  xs:flex-col  sm:flex-col md:flex-col  gap-[24px]">
                     <Input
                       placeholder="jeandupont@gmail.com"
                       label="Email"
@@ -127,7 +135,7 @@ export const Contact = () => {
                   />
                 </div>
               )}
-              <div className="flex gap-[24px] sm:flex-col md:flex-col w-full">
+              <div className="flex gap-[24px]  xs:flex-col sm:flex-col md:flex-col w-full">
                 <Button
                   label="Appeler"
                   onClick={() => {

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 type TYPETABLE = {
   data: any;
@@ -11,7 +12,7 @@ export const TableSlider = ({ data }: TYPETABLE) => {
 
   return (
     <div className="col-span-12 text-black rounded-2xl">
-      <div className="flex items-center justify-center gap-[24px] text-white mb-[24px]">
+      <div className="flex items-center justify-center xs:flex-wrap gap-[24px] text-white mb-[24px]">
         {data.map((elm: any, i: number) => {
           return (
             <ul
@@ -20,7 +21,7 @@ export const TableSlider = ({ data }: TYPETABLE) => {
                 page === i
                   ? "bg-prettyBlue ring-4 ring-white bg-opacity-25"
                   : "hover:ring-2 hover:ring-white"
-              } cursor-pointer flex items-center gap-[12px] text-[22px] rounded-2xl font-semibold px-[18px] bg-primary100 py-[8px] duration-200`}
+              } cursor-pointer flex h-full items-center w-full justify-center gap-[12px] text-[22px] rounded-2xl font-semibold px-[18px] bg-primary100 py-[8px] duration-200`}
               onClick={() => {
                 setPage(i);
               }}
@@ -31,19 +32,24 @@ export const TableSlider = ({ data }: TYPETABLE) => {
           );
         })}
       </div>
-      <div className="flex justify-between w-full overflow-hidden bg-white rounded-2xl">
-        <div className="mt-[32px] h-[420px] px-[32px] w-full">
+      <div className="flex justify-between w-full overflow-hidden bg-white xs:flex-col-reverse rounded-2xl">
+        <div className="mt-[32px] h-[300px] px-[32px] w-full">
           <h3 className="font-bold text-[24px] mb-[24px]">
             {data[page].title}
           </h3>
-          <p>{data[page].description}</p>
+          <p className="text-[18px]">{data[page].description}</p>
+          <Link href="/realisations">
+            <h3 className="mt-[24px] font-[500] hover:underline hover:text-primary200 cursor-pointer duration-150">
+              En savoir plus
+            </h3>
+          </Link>
         </div>
-        <div className="flex items-center justify-center w-full ">
+        <div className="flex items-center justify-center w-full bg-red">
           {data[page].img && (
             <img
               src={data[page].img}
               alt={data[page].title + "image"}
-              className="w-full aspect-auto"
+              className="h-full aspect-full"
             />
           )}
         </div>
