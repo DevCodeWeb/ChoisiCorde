@@ -10,6 +10,7 @@ import { interventions } from "data/interventions";
 export const Contact = () => {
   const [contactWay, setContactWay] = useState("call");
   const [send, setSend] = useState(false);
+  const [load, setLoad] = useState(false);
 
   const form = useRef();
 
@@ -25,7 +26,6 @@ export const Contact = () => {
       )
       .then(
         (result) => {
-          console.log("the message was send");
           setSend(true);
         },
         (error) => {
@@ -145,7 +145,7 @@ export const Contact = () => {
                 />
                 {send === false ? (
                   <Button
-                    label="Envoyer"
+                    label={load ? "En cours d'envoi..." : "Envoyer"}
                     onClick={() => {
                       sendEmail;
                     }}
