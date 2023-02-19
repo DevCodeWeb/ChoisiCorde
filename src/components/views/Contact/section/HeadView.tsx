@@ -1,6 +1,6 @@
 export const HeadView = () => {
   return (
-    <section className="pt-[90px] pb-[24px] shadow-2xl bg-primary100 xs:px-[12px] sm:px-[12px]">
+    <section className="pt-[90px] pb-[84px] shadow-2xl bg-primary100 xs:px-[12px] sm:px-[12px]">
       <h1 className="col-span-12 text-center text-[40px] font-bold xs:text-[24px] sm:text-[24px]">
         Demandez votre devis
       </h1>

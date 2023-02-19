@@ -9,10 +9,12 @@ import { interventions } from "data/interventions";
 
 export const ContactForm = () => {
   const [send, setSend] = useState(false);
+  const [load, setLoad] = useState(false);
 
   const form = useRef();
 
   const sendEmail = (e) => {
+    setLoad(true);
     e.preventDefault();
 
     emailjs
@@ -24,7 +26,7 @@ export const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log("the message was send");
+          setLoad(false);
           setSend(true);
         },
         (error) => {
@@ -55,6 +57,8 @@ export const ContactForm = () => {
             {send ? (
               <p className="text-orange text-[20px] col-span-12">
                 Nous avons bien reçu votre message !
+                <br />
+                Nous tâcherons de revenir vers vous dans les plus brefs délai.
               </p>
             ) : (
               <div className="flex flex-col gap-[24px]">
@@ -107,7 +111,7 @@ export const ContactForm = () => {
             <div className="flex gap-[24px]  xs:flex-col sm:flex-col md:flex-col w-full">
               {send === false ? (
                 <Button
-                  label="Envoyer"
+                  label={load ? "En cours d'envoi..." : "Envoyer"}
                   onClick={() => {
                     sendEmail;
                   }}
