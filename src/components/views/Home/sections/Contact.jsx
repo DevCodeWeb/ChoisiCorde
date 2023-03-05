@@ -35,7 +35,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="bg-primary100 xs:px-[12px] sm:px-[12px]">
+    <section className="bg-primary100 xs:px-[12px] sm:px-[12px] text-white">
       {contactWay === "call" ? (
         <div className="col-span-12 flex gap-[64px]">
           <img

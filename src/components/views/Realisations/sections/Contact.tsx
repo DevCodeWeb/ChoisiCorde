@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Contact = () => {
   return (
-    <section className="py-[32px] shadow-2xl bg-primary100 xs:px-[12px] sm:px-[12px]">
+    <section className="py-[32px] shadow-2xl bg-primary100 xs:px-[12px] sm:px-[12px] text-white">
       <p className="col-span-12 text-center text-[24px]">
         Vous souhaitez en faire partie ?
       </p>
