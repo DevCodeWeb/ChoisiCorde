@@ -31,7 +31,7 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 z-50 w-screen  duration-300 ${
+      className={`fixed top-0 z-50 w-screen text-white duration-300 ${
         scroll
           ? "bg-primary300 shadow-lg"
           : "bg-transparent hover:bg-primary300 hover:shadow-lg"

@@ -11,7 +11,7 @@ export const HeadView = () => {
   };
 
   return (
-    <div className="bg-headView bg-opacity-10">
+    <div className="text-white bg-headView bg-opacity-10">
       <section className="relative w-screen pb-[250px] xs:pb-[100px] sm:pb-[100px]">
         <img
           src="assets/logoCC.png"

@@ -7,7 +7,7 @@ import { Button } from "components/atoms/Button";
 
 export const Footer = () => {
   return (
-    <div className="w-screen bg-black ">
+    <div className="w-screen text-white bg-black">
       <footer className="py-[32px] flex flex-col gap-[64px] xs:px-[12px] sm:px-[12px]">
         <div className="flex gap-[72px] justify-between xs:flex-col-reverse sm:flex-col-reverse md:flex-col">
           <div className="flex flex-col gap-[12px]">

@@ -21,7 +21,7 @@ export const Interventions = () => {
   ];
 
   return (
-    <section className="pb-[120px] xs:px-[12px] sm:px-[12px]">
+    <section className="pb-[120px] xs:px-[12px] sm:px-[12px] text-white">
       <h1 className="col-span-12 text-center text-[40px] font-bold  xs:text-[32px] sm:text-[32px]">
         Ils ont fait appel à nous
       </h1>
