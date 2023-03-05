@@ -10,7 +10,7 @@ export const Contact = () => {
       <p className="col-span-12 text-center text-[16px]">
         Choisisez le moyen de contact qui vous convient le plus
       </p>
-      <div className="flex col-span-12 items-center gap-[12px] xs:flex-col sm:flex-col">
+      <div className="flex col-span-12 items-center justify-center gap-[12px] xs:flex-col sm:flex-col">
         <a href="tel:0751669701">
           <Button label="Appeler" />
         </a>
