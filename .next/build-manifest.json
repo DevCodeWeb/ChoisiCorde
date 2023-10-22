@@ -25,10 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/realisations": [
+    "/mentions-legales": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/realisations.js"
+      "static/chunks/pages/mentions-legales.js"
+    ],
+    "/politique-confidentialite": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/politique-confidentialite.js"
     ]
   },
   "ampFirstPages": []

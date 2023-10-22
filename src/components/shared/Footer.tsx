@@ -4,6 +4,7 @@ import emailFill from "@iconify/icons-eva/email-fill";
 import locationOnRounded from "@iconify/icons-material-symbols/location-on-rounded";
 
 import { Button } from "components/atoms/Button";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -68,15 +69,28 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse xs:items-center sm:items-center xs:gap-[12px] sm:gap-[12px] md:gap-[12px]">
+        <div className="flex justify-between items-center xs:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse xs:items-center sm:items-center xs:gap-[12px] sm:gap-[12px] md:gap-[12px]">
           <div className="flex items-center">
             <h5 className="text-[12px]">
               © Copyright 2022 - site développé par{" "}
-              <b className="duration-150 cursor-pointer hover:underline hover:text-primary100">
-                DevCode
-              </b>
+              <b className="duration-150 cursor-pointer">DevCreate</b>
             </h5>
           </div>
+          <Link href="mentions-legales">
+            <h5 className="text-[12px] duration-150 cursor-pointer hover:text-primary100">
+              Mentions légales
+            </h5>
+          </Link>
+          <Link href="politique-confidentialite">
+            <h5 className="text-[12px] duration-150 cursor-pointer hover:text-primary100">
+              Politique de confidentialité
+            </h5>
+          </Link>
+          <Link href="conditions-utilisation">
+            <h5 className="text-[12px] duration-150 cursor-pointer hover:text-primary100">
+              Conditions d'utilisation
+            </h5>
+          </Link>
           <div className="flex items-center gap-[12px] sm:flex-col md:flex-col">
             <h5>Téléphone : 07 51 66 97 01</h5>
             <a href="tel:0751669701">

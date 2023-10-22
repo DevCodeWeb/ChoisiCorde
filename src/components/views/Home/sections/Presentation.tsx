@@ -30,9 +30,8 @@ export const Presentation = () => {
           </p>
           <br />
           <p>
-            Soucieux de vous apporter une entière satisfaction, nous faisons
-            tout pour réaliser du travail d’excellence à la hauteur de vos
-            attentes.
+            Soucieux de vous une entière satisfaction, nous faisons tout pour
+            réaliser du travail d’excellence à la hauteur de vos attentes.
           </p>
         </div>
         <div className="sm:col-span-12 md:col-span-12 col-span-2 col-start-6 text-center mb-[24px] mt-[24px]">

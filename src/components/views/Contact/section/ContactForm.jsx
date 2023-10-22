@@ -49,7 +49,7 @@ export const ContactForm = () => {
               <h2 className="text-[40px] font-bold  xs:text-[20px] xs:hidden sm:hidden">
                 Écrivez-nous
               </h2>
-              <p>
+              <p className="font-light">
                 Afin de répondre au mieux à votre demande, merci de remplir les
                 champs ci-après :
               </p>

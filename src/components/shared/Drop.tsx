@@ -1,7 +1,6 @@
 import { Button, LinkBtn } from "components/atoms/Button";
 import { scrollTo } from "helper/ScrollTo";
 import Link from "next/link";
-import { useState } from "react";
 
 export const Couverture = () => {
   return (
