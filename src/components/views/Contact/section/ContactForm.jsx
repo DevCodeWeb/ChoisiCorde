@@ -84,7 +84,7 @@ export const ContactForm = () => {
                     label="Email"
                     name="email"
                     required
-                    pattern="[a-z0-9._]+@[a-z]+\.[a-z]{2,8}?"
+                    pattern="[a-zA-Z0-9._-]+@[a-z]+\.[a-z]{2,8}?"
                   />
                   <Input
                     placeholder="06 45 35 05 64"
