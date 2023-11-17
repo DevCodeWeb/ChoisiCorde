@@ -58,6 +58,7 @@ export const Contact = () => {
               <a href="tel:0751669701" className="w-full">
                 <Button label="Appeler maintenant" />
               </a>
+              <h3 className="font-bold mt-[4px] text-[20px]">ou</h3>
               <Button
                 label="Écrire un message"
                 onClick={() => {

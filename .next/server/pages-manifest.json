@@ -1,7 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/politique-confidentialite": "pages/politique-confidentialite.js",
-  "/mentions-legales": "pages/mentions-legales.js"
+  "/_error": "pages/_error.js",
+  "/realisations": "pages/realisations.js"
 }

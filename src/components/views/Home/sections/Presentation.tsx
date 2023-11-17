@@ -6,7 +6,7 @@ export const Presentation = () => {
   return (
     <div className="w-screen shadow-lg bg-white xs:px-[12px] sm:px-[12px] text-white">
       <section className="bg-primary100 sm:mt-[50px]">
-        <div className="bg-white col-span-12 text-primary300 rounded-2xl mt-[24px] text-center pt-[32px] xs:px-[12px] sm:p-[12px]">
+        <div className="bg-white col-span-12 text-primary300 rounded-2xl mt-[24px] text-center pt-[32px] xs:px-[12px] sm:p-[12px] shadow-lg">
           <h2 className="text-[38px] font-semibold xs:text-[24px] sm:text-[24px]">
             Expert de vos travaux en hauteur et d’accès difficile
           </h2>

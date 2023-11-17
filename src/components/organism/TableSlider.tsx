@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { Icon } from "@iconify/react";
+import arrowForwardFill from "@iconify/icons-eva/arrow-forward-fill";
 import Link from "next/link";
 
 type TYPETABLE = {
@@ -39,9 +40,12 @@ export const TableSlider = ({ data }: TYPETABLE) => {
           </h3>
           <p className="text-[18px]">{data[page].description}</p>
           <Link href="/realisations">
-            <h3 className="mt-[24px] font-[500] hover:underline hover:text-primary200 cursor-pointer duration-150">
-              En savoir plus
-            </h3>
+            <div className="flex items-end gap-[8px] hover:gap-[12px] duration-150">
+              <h3 className="mt-[24px] font-[500] hover:underline hover:text-primary200 cursor-pointer duration-150">
+                En savoir plus
+              </h3>
+              <Icon icon={arrowForwardFill} className="mb-[4px]" />
+            </div>
           </Link>
         </div>
         <div className="flex items-center justify-center w-full bg-red">

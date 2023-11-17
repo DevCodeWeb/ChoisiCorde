@@ -22,6 +22,11 @@ export const Realisation = ({ data, key }: CardType) => {
       <div className="flex flex-wrap w-full">
         <img src={data.imgs[0]} alt="Intervention Image" className="" />
       </div>
+      {data.imgs[1] && (
+        <div className="flex flex-wrap w-full">
+          <img src={data.imgs[1]} alt="Intervention Image" className="" />
+        </div>
+      )}
     </div>
   );
 };

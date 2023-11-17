@@ -27,10 +27,11 @@ export const HeadView = () => {
         </div>
         <div className="flex flex-col col-start-7 col-span-5 sm:text-center xs:col-span-12 sm:col-span-12 xs:px-[12px] md:text-center xs:text-center xs:items-center md:col-span-12 xs:pt-0 pt-[270px] sm:pt-0 md:pt-0">
           <h1 className="font-bold text-[48px]">Choisi Corde</h1>
-          <h2 className="font-semibold text-[32px]">Trop haut pour toi ?</h2>
+          <h2 className="font-semibold text-[32px]">Trop haut ?</h2>
           <p className="text-[24px] mb-[12px]">
-            Ne prends pas de risques <b>Choisi Corde</b> est là pour tous tes
-            travaux d’accès difficile
+            Pas de risques <b>Choisi Corde</b>
+            <br />
+            tout travaux en hauteur
           </p>
           <div className="flex gap-[12px] items-center">
             <Icon icon={locationOnRounded} className="w-[24px] h-[24px]" />
