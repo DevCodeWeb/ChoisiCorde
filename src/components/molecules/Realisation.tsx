@@ -1,4 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+
+import { Icon } from "@iconify/react";
+import pinOutline from "@iconify/icons-eva/pin-outline";
+
 type CardType = {
   data: any;
   key: any;
@@ -15,9 +19,12 @@ export const Realisation = ({ data, key }: CardType) => {
         <h5 className="font-normal text-left text-[20px]">
           {data.description}
         </h5>
-        <h5 className="font-normal text-left text-[18px] mb-[24px]">
-          {data.adress}
-        </h5>
+        <div className="flex itmes-center gap-[8px]">
+          <Icon icon={pinOutline} className="mt-[4px]" />
+          <h5 className="font-normal text-left text-[18px] mb-[24px]">
+            {data.adress}
+          </h5>
+        </div>
       </div>
       <div className="flex flex-wrap w-full">
         <img src={data.imgs[0]} alt="Intervention Image" className="" />
